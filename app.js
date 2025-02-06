@@ -18,9 +18,14 @@ const NoteRouter = require("./routes/noteRoutes");
 const AnnouncementRouter = require("./routes/announcementRoutes");
 const paymentController = require("./controller/paymentController");
 
+import cors from "cors";
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173", // Development
+      "https://course-hive-master.netlify.app", // Production
+    ],
     methods: ["GET", "POST", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
@@ -31,8 +36,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 mongoose
-  .connect(process.env.DATABASE_URL, {
-  // .connect(process.env.MONGODB_URI, {
+  // .connect(process.env.DATABASE_URL, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
