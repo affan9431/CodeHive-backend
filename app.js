@@ -26,6 +26,7 @@ app.use(
     ],
     methods: ["GET", "POST", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true, // Allow cookies and authentication headers
   })
 );
 
