@@ -18,8 +18,6 @@ const NoteRouter = require("./routes/noteRoutes");
 const AnnouncementRouter = require("./routes/announcementRoutes");
 const paymentController = require("./controller/paymentController");
 
-import cors from "cors";
-
 app.use(
   cors({
     origin: [
