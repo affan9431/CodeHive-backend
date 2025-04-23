@@ -17,6 +17,7 @@ const QARouter = require("./routes/QARoutes");
 const NoteRouter = require("./routes/noteRoutes");
 const AnnouncementRouter = require("./routes/announcementRoutes");
 const paymentController = require("./controller/paymentController");
+const AppError = require("./utils/AppError");
 
 app.use(
   cors({

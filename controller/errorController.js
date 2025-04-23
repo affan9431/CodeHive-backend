@@ -1,3 +1,5 @@
+const AppError = require("../utils/AppError");
+
 const handleCastErrorDB = (err) => {
   const message = `Inavalid ${err.path}: ${err.value}.`;
   return new AppError(message, 400);
