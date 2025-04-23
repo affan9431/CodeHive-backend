@@ -23,7 +23,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", // Development
-      "https://course-hives.netlify.app", // Production
+      "https://code-hives.netlify.app", // Production
     ],
     methods: ["GET", "POST", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
