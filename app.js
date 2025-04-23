@@ -39,7 +39,6 @@ app.use(cookieParser());
 
 mongoose.set("strictQuery", true); // Suppress deprecation warning
 
-console.log(process.env.MONGODB_URI);
 mongoose
   .connect(
     "mongodb+srv://affansayeed234:PPCYYWaX00nZAi5l@cluster0.vefdbj6.mongodb.net/CodeHiveDB?retryWrites=true&w=majority",
