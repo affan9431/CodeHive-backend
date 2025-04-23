@@ -55,10 +55,10 @@ exports.getCheckoutSession = async (req, res, next) => {
       payment_method_types: ["card"],
 
       // :title/:id/learn/lecture
-      success_url: `http://localhost:5173/app/${encodeURIComponent(
+      success_url: `https://code-hives.netlify.app/app/${encodeURIComponent(
         item.name
       )}/${item.id}/learn/lecture/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `http://localhost:5173/app`,
+      cancel_url: `https://code-hives.netlify.app`,
       customer_email: currentUser.email, // Use currentUser's email from decoded JWT
       mode: "payment",
       line_items: lineItems,
