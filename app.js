@@ -40,7 +40,7 @@ app.use(cookieParser());
 console.log(process.env.MONGODB_URI);
 mongoose
   // .connect(process.env.DATABASE_URL, {
-  .connect(process.env.MONGODB_URI, {
+  .connect("mongodb://affansayeed234:PPCYYWaX00nZAi5l@cluster0-shard-00-00.vefdbj6.mongodb.net:27017,cluster0-shard-00-01.vefdbj6.mongodb.net:27017,cluster0-shard-00-02.vefdbj6.mongodb.net:27017/CodeHiveDB?ssl=true&replicaSet=atlas-xxxxxx-shard-0&authSource=admin&retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
