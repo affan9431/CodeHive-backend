@@ -42,7 +42,7 @@ mongoose.set("strictQuery", true); // Suppress deprecation warning
 console.log(process.env.MONGODB_URI);
 mongoose
   .connect(
-    "mongodb://affansayeed234:PPCYYWaX00nZAi5l@cluster0-shard-00-00.vefdbj6.mongodb.net:27017,cluster0-shard-00-01.vefdbj6.mongodb.net:27017,cluster0-shard-00-02.vefdbj6.mongodb.net:27017/CodeHiveDB?ssl=true&replicaSet=atlas-xxxxxx-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "mongodb+srv://affansayeed234:PPCYYWaX00nZAi5l@cluster0.vefdbj6.mongodb.net/CodeHiveDB?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
