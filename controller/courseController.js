@@ -58,8 +58,6 @@ exports.getCourseByQuery = async (req, res, next) => {
   try {
     const { q } = req.query;
 
-    console.log(q);
-
     const courses = await Course.find({
       $or: [
         { categoryName: { $regex: q, $options: "i" } }, // Case-insensitive search in category

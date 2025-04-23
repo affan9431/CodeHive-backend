@@ -22,7 +22,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", // Development
-      "https://course-hive-master.netlify.app", // Production
+      // "https://course-hive-master.netlify.app", // Production
     ],
     methods: ["GET", "POST", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -32,10 +32,11 @@ app.use(
 
 app.options("*", cors());
 
-
 app.use(express.json());
 
 app.use(cookieParser());
+
+console.log(process.env.MONGODB_URI);
 
 mongoose
   // .connect(process.env.DATABASE_URL, {
